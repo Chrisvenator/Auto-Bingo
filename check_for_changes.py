@@ -30,4 +30,4 @@ if files1 != files2 or not os.path.exists(directory2) or not os.path.isdir(direc
     print("Processing images for " + directory1)
     shutil.rmtree(directory2)
     subprocess.call(["python", "preprocess_images.py", directory1])
-    print("Processing images for " + directory1 + " finished")
+    print("Processed images for " + directory1)

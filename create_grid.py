@@ -17,15 +17,15 @@ files = os.listdir(input_dir)
 # Shuffle the files list for different order
 random.shuffle(files)
 
-# Randomly select 25 images (if available) for the first collage
-selected_files = random.sample(files, min(25, len(files)))
-
 # Calculate the dimensions for the grid and spacing
-grid_size = (5, 5)
+grid_size = (6, 6)
 spacing = 50
 image_size = (250, 250)
 extension_percentage = 0.05
 border_thickness = 10
+
+# Randomly select 25 images (if available) for the first collage
+selected_files = random.sample(files, min(grid_size[0] * grid_size[1], len(files)))
 
 # Calculate the extended image size
 extended_image_size = (
@@ -118,9 +118,10 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 collage1.save("out/" + output_name + "_1.png")
 
-print("First  collage created and saved as " + output_name + "_1.png.")
+print("First collage created and saved as " + output_name + "_1.png.")
 
 # Randomly select 25 images (if available) for the second collage
+#selected_files = random.sample(files, min(25, len(files)))
 random.shuffle(selected_files)
 
 # Create a new blank image for the second collage
