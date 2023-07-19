@@ -1,5 +1,5 @@
 # Auto-Bingo
-a autobingo generator
+an autobingo generator
 
 # How to use:
 
